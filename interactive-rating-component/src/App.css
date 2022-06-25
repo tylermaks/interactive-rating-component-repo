@@ -23,6 +23,7 @@ body {
 
 h1 {
   color: white;
+  font-size: 2rem;
   margin-bottom: 1em;
 }
 
@@ -30,6 +31,23 @@ p {
   color: #959eac;
   font-size: 15px;
   font-weight: 400;
+}
+
+button {
+  background-color: #fb7413;
+  color: white;
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 15px;
+  padding: 1em;
+}
+
+button:hover {
+  background-color: white;
+  color: #fb7413;
 }
 
 #component-container {
@@ -46,16 +64,8 @@ p {
   background-color: #121417;
   border-radius: 15px;
   padding: 1.5rem;
-  height: 350px;
+  height: 400px;
   width: 350px;
-}
-
-.star-icon {
-  background-color: #252d37;
-  border-radius: 50%;
-  padding: 1em;
-  height: 30px;
-  width: 30px;
 }
 
 .circle-container {
@@ -65,6 +75,11 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.circle-container .circle:hover {
+  background-color: #959eac;
+  color: white;
 }
 
 .circle {
@@ -79,8 +94,9 @@ p {
           justify-content: center;
   background-color: #252d37;
   border-radius: 50%;
+  color: #7c8798;
   padding: 1em;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
 }
 /*# sourceMappingURL=App.css.map */

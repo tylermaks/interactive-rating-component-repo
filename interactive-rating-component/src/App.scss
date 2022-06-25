@@ -1,9 +1,11 @@
+//VARIABLES
 $drkBlue: hsl(216, 12%, 8%);
 $blue: hsl(213, 19%, 18%);
 $ltGrey: hsl(217, 12%, 63%);
 $mdGrey: hsl(216, 12%, 54%);
+$orange: hsl(25, 97%, 53%);
 
-
+//SETUP
 *,*::after,*::before{ 
   margin: 0;
 }
@@ -20,12 +22,12 @@ body{
 
   background-color: black;
   font-family: 'Overpass', sans-serif;
-
 }
 
 //TYPOGRAPHY
 h1{ 
   color:white;
+  font-size: 2rem;
   margin-bottom: 1em;
 }
 
@@ -33,6 +35,24 @@ p{
   color:$ltGrey;
   font-size: 15px;
   font-weight: 400;
+}
+
+button{ 
+  background-color: $orange;
+  color:white;
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  border:none;
+  border-radius: 15px;
+  padding: 1em;
+}
+
+button:hover{
+  background-color: white;
+  color:$orange;
 }
 
 #component-container{
@@ -44,23 +64,19 @@ p{
   border-radius: 15px;
   padding: 1.5rem;
   
-  height: 350px;
+  height: 400px;
   width: 350px;
-}
-
-.star-icon{
-  background-color: $blue;
-  border-radius: 50%; 
-  padding: 1em;
-
-  height: 30px;
-  width: 30px
 }
 
 
 .circle-container{ 
   display: flex;
   justify-content: space-between;
+}
+
+.circle-container .circle:hover{
+  background-color: $ltGrey;
+  color:white;
 }
 
 .circle{ 
@@ -70,9 +86,9 @@ p{
 
   background-color: $blue;
   border-radius: 50%;
+  color: $mdGrey;
   padding: 1em;
 
-  height: 30px;
-  width: 30px
-
+  height: 20px;
+  width: 20px
 }
