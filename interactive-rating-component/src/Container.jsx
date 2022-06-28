@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import RatingCircle from "./RatingCircle"
 
 function Container() { 
-
-
 
     return (
         <div id="component-container"> 
@@ -15,9 +13,7 @@ function Container() {
                 <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
             </article>
 
-            <ul className="circle-container">
-               <RatingCircle />
-            </ul>
+            <RatingCircle />
             
             <button>Submit</button>
         </div>        

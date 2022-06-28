@@ -21,6 +21,10 @@ body {
   font-family: 'Overpass', sans-serif;
 }
 
+ul {
+  padding: 0;
+}
+
 h1 {
   color: white;
   font-size: 2rem;
