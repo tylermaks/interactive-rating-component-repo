@@ -2,34 +2,26 @@ import React, {useState} from 'react'
 
 
 const Circle = (props) =>{
+
     return(
-        <li style={{backgroundColor: props.test ? "hsl(25, 97%, 53%)": ""}} className="circle">{props.num}</li> 
+        <li onClick={props.test1} className={"circle"} style={{backgroundColor: props.test2 ? "hsl(25, 97%, 53%)" : "", color: props.test2 ? "#FFF" : ""}}>
+            {props.num}
+        </li> 
     )
 }
 
 const RatingCircle = () =>{ 
-    
-    const[background, setBackground] = useState(false)
 
-    const changeBG = () => {
-        setBackground(true)
-    }
-
-
-    const circles = [1, 2, 3, 4, 5];    
-    const createCircles = (circles) => { 
-        return(
-
-            <Circle 
-            num={circles}
-            test={background} />
-        )
-    }
-
+    const[selected, setSelected] = useState(null)
+    const circles = [1, 2, 3, 4, 5]; 
 
     return(
-        <ul onClick={changeBG} className="circle-container">
-            {circles.map(createCircles)}
+        <ul className="circle-container">
+            
+
+            {circles.map((circle, index) => (
+                 <Circle key={index} id={index} num={circle} test1={() => setSelected(index)} test2={selected === index}/>
+            ))}
         </ul>   
     )
 }
