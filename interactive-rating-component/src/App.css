@@ -1,4 +1,6 @@
 *, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
 }
 
@@ -28,13 +30,14 @@ ul {
 h1 {
   color: white;
   font-size: 2rem;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 p {
   color: #959eac;
   font-size: 15px;
   font-weight: 400;
+  line-height: 25px;
 }
 
 button {
@@ -45,7 +48,7 @@ button {
   letter-spacing: 2px;
   text-transform: uppercase;
   border: none;
-  border-radius: 15px;
+  border-radius: 25px;
   padding: 1em;
 }
 
@@ -55,6 +58,14 @@ button:hover {
 }
 
 #component-container {
+  background-color: #121417;
+  border-radius: 15px;
+  padding: 2rem;
+  height: 450px;
+  width: 450px;
+}
+
+.rating-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,11 +76,17 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #121417;
-  border-radius: 15px;
-  padding: 1.5rem;
-  height: 400px;
-  width: 350px;
+  height: 100%;
+}
+
+.rating-page--center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0 2%;
 }
 
 .circle-container {
@@ -100,12 +117,18 @@ button:hover {
   border-radius: 50%;
   color: #7c8798;
   padding: 1em;
-  height: 20px;
-  width: 20px;
+  height: 60px;
+  width: 60px;
 }
 
-.circle-active {
-  background-color: #fb7413;
-  color: white;
+.selected-text {
+  background: #252d37;
+  border-radius: 25px;
+  color: #fb7413;
+  padding: 0.5em 1.5em;
+}
+
+.thankyou-text {
+  text-align: center;
 }
 /*# sourceMappingURL=App.css.map */

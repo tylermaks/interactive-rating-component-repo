@@ -10,17 +10,22 @@ const Circle = (props) =>{
     )
 }
 
-const RatingCircle = () =>{ 
+const RatingCircle = (props) =>{ 
 
     const[selected, setSelected] = useState(null)
     const circles = [1, 2, 3, 4, 5]; 
 
     return(
         <ul className="circle-container">
-            
-
+        
             {circles.map((circle, index) => (
-                 <Circle key={index} id={index} num={circle} test1={() => setSelected(index)} test2={selected === index}/>
+                 <Circle 
+                    key={index} 
+                    id={index} 
+                    num={circle} 
+                    test1={() => setSelected(index)} 
+                    test2={selected === index}
+                />
             ))}
         </ul>   
     )
