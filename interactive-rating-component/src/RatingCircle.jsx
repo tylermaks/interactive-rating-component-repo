@@ -4,8 +4,8 @@ import React, {useState} from 'react'
 const Circle = (props) =>{
 
     return(
-        <li onClick={props.test1} className={"circle"} style={{backgroundColor: props.test2 ? "hsl(25, 97%, 53%)" : "", color: props.test2 ? "#FFF" : ""}}>
-            {props.num}
+        <li onClick={() => {props.setSelected(); props.ratingNum()}} className={"circle"} style={{backgroundColor: props.selected ? "hsl(25, 97%, 53%)" : "", color: props.selected ? "#FFF" : ""}}>
+            {props.id}
         </li> 
     )
 }
@@ -21,10 +21,10 @@ const RatingCircle = (props) =>{
             {circles.map((circle, index) => (
                  <Circle 
                     key={index} 
-                    id={index} 
-                    num={circle} 
-                    test1={() => setSelected(index)} 
-                    test2={selected === index}
+                    id={circle} 
+                    setSelected={() => setSelected(index)} 
+                    selected={selected === index}
+                    ratingNum={() => props.ratingNum(circle)}
                 />
             ))}
         </ul>   

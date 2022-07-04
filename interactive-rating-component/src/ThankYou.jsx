@@ -5,7 +5,7 @@ const ThankYou = (props) => {
         <div className="rating-page rating-page--center">
             <img className="mobile-img" src="images/illustration-thank-you.svg" alt="Mobile Phone with Credit Card" />
        
-            <p className="selected-text">You selected 4 out of 5</p>
+            <p className="selected-text">You selected {props.ratingNum} out of 5</p>
        
             <article className="thankyou-text">
                 <h1>Thank you!</h1>
