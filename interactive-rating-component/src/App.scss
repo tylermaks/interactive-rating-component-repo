@@ -16,7 +16,7 @@ html, body{
   max-width:100%;
 }
 
-body{ 
+body, .App{ 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +29,8 @@ ul{
   padding:0;
 }
 
-//TYPOGRAPHY
+
+//TYPOGRAPHY & REUSABLE
 h1{ 
   color:white;
   font-size: 2rem;
@@ -61,15 +62,18 @@ button:hover{
   color:$orange;
 }
 
+//CONTAINER COMPONENT
 #component-container{
   background-color: $drkBlue;
   border-radius: 15px;
   padding: 2rem;
   
   height: 450px;
-  width: 450px;
+  width: 90%;
+  max-width: 450px;
 }
 
+//RATING PAGE COMPONENT
 .rating-page{
   display: flex;
   flex-direction: column;
@@ -85,6 +89,7 @@ button:hover{
   }
 }
 
+//CIRCLE COMPONENT
 .circle-container{ 
   display: flex;
   justify-content: space-between;
@@ -103,13 +108,22 @@ button:hover{
   background-color: $blue;
   border-radius: 50%;
   color: $mdGrey;
-  padding: 1em;
 
-  height: 60px;
-  width: 60px
+  width: 17%;
 }
 
-//THANKYOU 
+.circle::after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.star-icon{ 
+  padding: 16px;
+}
+
+
+//THANK YOU COMPONENT
 .selected-text{
   background: $blue;
   border-radius: 25px;

@@ -9,7 +9,7 @@ html, body {
   max-width: 100%;
 }
 
-body {
+body, .App {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,7 +62,8 @@ button:hover {
   border-radius: 15px;
   padding: 2rem;
   height: 450px;
-  width: 450px;
+  width: 90%;
+  max-width: 450px;
 }
 
 .rating-page {
@@ -116,9 +117,17 @@ button:hover {
   background-color: #252d37;
   border-radius: 50%;
   color: #7c8798;
-  padding: 1em;
-  height: 60px;
-  width: 60px;
+  width: 17%;
+}
+
+.circle::after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.star-icon {
+  padding: 16px;
 }
 
 .selected-text {
