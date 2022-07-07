@@ -25,10 +25,6 @@ body, .App{
   font-family: 'Overpass', sans-serif;
 }
 
-ul{
-  padding:0;
-}
-
 
 //TYPOGRAPHY & REUSABLE
 h1{ 
@@ -54,6 +50,7 @@ button{
 
   border:none;
   border-radius: 25px;
+  cursor: pointer;
   padding: 1em;
 }
 
@@ -62,7 +59,11 @@ button:hover{
   color:$orange;
 }
 
-//CONTAINER COMPONENT
+ul{
+  padding:0;
+}
+
+//INTERACTIVE RATING COMPONENT
 #component-container{
   background-color: $drkBlue;
   border-radius: 15px;
@@ -100,6 +101,10 @@ button:hover{
   color:white;
 }
 
+.circle-container .circle{
+  cursor: pointer;
+}
+
 .circle{ 
   display: flex;
   align-items: center;
@@ -108,7 +113,6 @@ button:hover{
   background-color: $blue;
   border-radius: 50%;
   color: $mdGrey;
-
   width: 17%;
 }
 
@@ -116,10 +120,6 @@ button:hover{
   content: '';
   display: block;
   padding-bottom: 100%;
-}
-
-.star-icon{ 
-  padding: 16px;
 }
 
 

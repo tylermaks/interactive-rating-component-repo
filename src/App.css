@@ -23,10 +23,6 @@ body, .App {
   font-family: 'Overpass', sans-serif;
 }
 
-ul {
-  padding: 0;
-}
-
 h1 {
   color: white;
   font-size: 2rem;
@@ -49,12 +45,17 @@ button {
   text-transform: uppercase;
   border: none;
   border-radius: 25px;
+  cursor: pointer;
   padding: 1em;
 }
 
 button:hover {
   background-color: white;
   color: #fb7413;
+}
+
+ul {
+  padding: 0;
 }
 
 #component-container {
@@ -104,6 +105,10 @@ button:hover {
   color: white;
 }
 
+.circle-container .circle {
+  cursor: pointer;
+}
+
 .circle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,10 +129,6 @@ button:hover {
   content: '';
   display: block;
   padding-bottom: 100%;
-}
-
-.star-icon {
-  padding: 16px;
 }
 
 .selected-text {

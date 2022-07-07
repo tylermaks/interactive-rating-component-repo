@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import RatingPage from "./RatingPage"
 import ThankYou from "./ThankYou"
 
-function Container() { 
+function InteractiveRating() { 
     const[submit, setSubmit] = useState(false)
     const[selector, setSelector] = useState('')
     
@@ -12,9 +12,9 @@ function Container() {
 
     return (
         <div id="component-container"> 
-            {submit ? <ThankYou ratingNum={selector} /> : <RatingPage clicked={handleSubmit} ratingNum ={setSelector} />}
+            {submit ? <ThankYou ratingNum={selector} /> : <RatingPage clicked={handleSubmit} setRatingNum ={setSelector} />}
         </div>        
     );
 }
 
-export default Container;
+export default InteractiveRating;

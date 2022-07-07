@@ -1,10 +1,10 @@
-import Container from './Container'
+import InteractiveRating from './InteractiveRating'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Container />
+      <InteractiveRating />
     </div>
   );
 }
